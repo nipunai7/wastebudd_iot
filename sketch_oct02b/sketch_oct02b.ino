@@ -1,13 +1,15 @@
-#include "FirebaseESP32.h"
-#include <WiFi.h>
-#include "HTTPClient.h"
+#include <FirebaseESP32.h>
+#include <FirebaseESP32HTTPClient.h>
+#include <FirebaseJson.h>
+#include <HTTPClient.h>
+#include <WiFiClient.h>
 
 #define FIREBASE_HOST "wastebudd.firebaseio.com"   
 #define FIREBASE_AUTH "d3Gmlt7HSyetYEsziKAqBTdp3eRZ1pVakjHzli2u"
  
 const char* ssid = "MNK-LAPTOP";
 const char* password =  "Mnk@kelaniya";
-const char* host = "http://139.162.10.226/wastebudd";
+const char* host = "https://moviemit.com/wastebudd";
 int clk = 0;
 FirebaseData firebaseData;
 
@@ -36,7 +38,7 @@ pinMode(bulb,OUTPUT);
   Serial.println("Connected to the WiFi network");
   Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);  
   
- Firebase.reconnectWiFi(true);
+Firebase.reconnectWiFi(true);
 }
 
 void loop() {
