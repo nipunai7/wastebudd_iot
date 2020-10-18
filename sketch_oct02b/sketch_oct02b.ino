@@ -1,6 +1,4 @@
 #include <FirebaseESP32.h>
-#include <FirebaseESP32HTTPClient.h>
-#include <FirebaseJson.h>
 #include <HTTPClient.h>
 #include <WiFiClient.h>
 
